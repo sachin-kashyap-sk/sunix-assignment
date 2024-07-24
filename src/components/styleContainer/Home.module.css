@@ -1,0 +1,21 @@
+.mainContainer {
+  padding: 3%;
+  padding-top: 0%;
+}
+
+.table {
+  cursor: pointer;
+  border: 0;
+}
+
+.nameText {
+  color: #021526 !important;
+  font-size: 17px !important;
+  font-weight: 500 !important;
+}
+
+.commonText {
+  color: #021526 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+}
