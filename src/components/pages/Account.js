@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import * as cocoSsd from "@tensorflow-models/coco-ssd";
 import "@tensorflow/tfjs";
 import { Box, Container } from "@mui/material";
-
+import classes from "../styleContainer/Account.module.css";
 const Account = () => {
   const [predictions, setPredictions] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -43,12 +43,7 @@ const Account = () => {
         accept="image/*,video/*"
         onChange={handleImageUpload}
       />
-      <Box
-        sx={{
-          position: "absolute",
-          width: "50%",
-        }}
-      >
+      <Box className={classes.firstContainer}>
         <img width="100%" height="100%" ref={imageRef} alt="" />
         <video
           width="100%"
@@ -66,23 +61,15 @@ const Account = () => {
             {predictions.map((prediction, index) => (
               <Box
                 key={index}
+                className={classes.predictContainer}
                 style={{
-                  position: "relative",
-                  border: "2px solid green",
-                  backgroundColor: "transparent",
                   left: prediction.bbox[0],
                   top: prediction.bbox[1],
                   width: prediction.bbox[2],
                   height: prediction.bbox[3],
                 }}
               >
-                <p
-                  style={{
-                    color: "#399918",
-                    fontSize: "22px",
-                    fontWeight: "600",
-                  }}
-                >
+                <p className={classes.text}>
                   {prediction.class} - : {(prediction.score * 100).toFixed(2)}%
                 </p>
               </Box>

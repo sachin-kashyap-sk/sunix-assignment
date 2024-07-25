@@ -1,0 +1,16 @@
+.firstContainer {
+  position: absolute;
+  width: 50%;
+}
+
+.predictContainer {
+  position: relative;
+  border: 2px solid green;
+  background-color: transparent;
+}
+
+.text {
+  color: #399918;
+  font-size: 22px;
+  font-weight: 600;
+}
